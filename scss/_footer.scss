@@ -1,0 +1,34 @@
+footer {
+    height: 110px;
+    justify-content: space-between;
+
+    .row {
+      gap: 30px;
+    }
+
+    ul {
+      a {
+        color: #ccc;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      align-items: flex-end;
+      padding: 30px 20px;
+      height: auto;
+
+      .sides {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .row {
+        gap: 0;
+      }
+
+      ul {
+        margin: 30px 0;
+      }
+    }
+  }

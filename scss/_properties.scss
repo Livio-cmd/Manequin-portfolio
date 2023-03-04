@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Nunito+Sans:wght@400;700&display=swap');
+
+@mixin fontSetup($color, $size, $weight, $family, $transform, $lineHeight) {
+    color: $color;
+
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+    text-transform: $transform;
+
+    line-height: $lineHeight;
+}
+
+h1 {@include fontSetup(#111, 64px, 700, 'DM Sans', uppercase, 1)}
+
+h2 {@include fontSetup(#111, 45px, 700, 'Nunito Sans', none, 1)}
+
+h3 {@include fontSetup(#6d6d6d, 24px, 700, 'Nunito Sans', none, 1)}
+
+p{@include fontSetup(#111, 16px, 400, 'Nunito sans', none, 1.8)}
+
+a, .link, .button{
+    @include fontSetup(#3c3c3c, 15px, 700, 'Nunito sans', capitalize, 1.8);
+
+    text-decoration: none;
+    transition: 400ms ease;
+    position: relative;
+    width: fit-content;
+
+    &:hover {
+        color: #ccc;
+    }
+}
+
+.button {
+    color: #ffffff;
+    background-color: #272727;
+    padding: 20px 40px;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        opacity: 0.9;
+    }
+}
+
+
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 92%;
+    margin: 0 auto;
+
+    @media (max-width:1040px) {
+        width: 100%;
+        padding: 0 10px;
+        max-width: none;
+      }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media (max-width:1040px) {
+        flex-direction: column;
+    }
+
+    form {
+        .row {
+            flex-direction:row;
+        }
+    }
+}
+
+@media (max-width:1040px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+}

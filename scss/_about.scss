@@ -1,0 +1,25 @@
+@import '../scss/vars';
+
+#about {
+    gap: 40px;
+    padding-top: calc($sectionMargin * 2);
+
+    p {
+        color: #333;
+
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1.4;
+
+        width: 100%;
+        max-width: 1200px;
+
+        @media (max-width:1040px) {
+            font-size: 28px;
+        }
+    }
+
+    @media (maw-width: 1040px) {
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,81 @@
+@import "./scss/properties";
+@import "./scss/imageShow";
+@import "./scss/navbar";
+@import "./scss/header";
+@import "./scss/about";
+@import "./scss/vars";
+@import "./scss/gallery";
+@import "./scss/contact";
+@import "./scss/footer";
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #333333;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  padding: $sectionMargin 0px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #272727;
+}
+
+img {
+    display: block;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: inherit;
+}
+
+@media (max-width:1040px) {
+  .mobile {
+    display: inherit !important;
+  }
+  .desktop {
+    display: none;
+  }
+
+  section {
+    padding: 100px 0;
+  }
+}

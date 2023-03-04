@@ -1,0 +1,130 @@
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: inherit;
+    height: 110px;
+
+    background-color: white;
+
+    #menu-btn {
+        display: none;
+      }
+
+      label[for=menu-btn] {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 10px;
+
+        span {
+          width: 25px;
+          height: 3px;
+          background-color: #111;
+          transition: all 300ms ease-in-out;
+
+          &:nth-child(2) {
+            margin: 4px 0;
+          }
+        }
+      }
+
+      #menu-btn:checked + label{
+        & span:nth-child(1) {
+          transform: rotate(45deg) translateY(4.5px);
+        }
+
+        & span:nth-child(2) {
+          opacity: 0;
+          margin: 0;
+          transform: scaleY(0);
+        }
+
+        & span:nth-child(3) {
+          transform: rotate(-45deg) translateY(-4.5px);
+        }
+      }
+
+    svg {
+        transform: translateY(5px);
+    }
+
+    .container {
+        gap: 120px;
+    }
+
+    .right-side {
+        gap: 60px;
+    }
+
+    .button {
+        padding: 15px 28px;
+    }
+
+    #logo {
+        font-size: 18px;
+        color: #2b2b2b;
+    }
+
+    @media (max-width:1040px) {
+        justify-content: center;
+        position: relative;
+        .left-side {
+
+            flex-direction: row;
+            justify-content: space-between;
+
+            position: fixed;
+            background-color: white;
+
+            height: 100%;
+            max-height: 110px;
+            width: 100%;
+
+            padding: 0 20px;
+        }
+    }
+}
+
+#mobile-nav {
+    background-color: white;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 99;
+
+    position: fixed;
+    inset: 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 400ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    ul {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        a {
+            font-size: 24px;
+        }
+        width: fit-content;
+        width: 100%;
+        height: 100%;
+    }
+}
