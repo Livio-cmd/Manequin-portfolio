@@ -36,3 +36,29 @@ function toggleMenu() {
   menu.classList.toggle('active');
 };
 
+// fading animation on screen enter
+
+const targets = document.querySelectorAll('[data-animation=fade]');
+// Select all image container
+const galleryContainers = document.querySelectorAll('.img-container');
+// Set the delays for each one ( to ne * by 100 )
+const delays = [0, 1, 2, 3, 0, 1, 2, 3];
+// Apply delay to all containers
+galleryContainers.forEach((item, index) => {
+    item.style.transitionDelay = `${delays[index] * 100}ms`;
+});
+
+// Detect if object must be displayed or not with a treshold
+window.addEventListener('scroll', () => {
+  targets.forEach((target) => {
+
+    let targetY = target.getBoundingClientRect().top;
+    const treshold = screen.height * 0.8;
+
+    if(targetY-treshold <= 0) {
+      target.classList.add('visible');
+    }else {
+      target.classList.remove('visible');
+    }
+  });
+});

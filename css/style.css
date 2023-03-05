@@ -554,4 +554,13 @@ img {
   section {
     padding: 100px 0;
   }
+}
+[data-animation=fade] {
+  opacity: 0 !important;
+  transform: translateY(100px);
+  transition: all 1s ease-in-out;
+}
+[data-animation=fade].visible {
+  transform: translateY(0);
+  opacity: 1 !important;
 }/*# sourceMappingURL=style.css.map */
