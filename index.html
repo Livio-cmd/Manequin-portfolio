@@ -223,16 +223,16 @@ const AmagiLoader = {
             div.style.position = 'absolute';
             div.style.left = '50%';
             div.style.top = '50%';
+            div.style.transform = 'translate(-50%, -50%)';
             div.style.zIndex = '9999';
             div.style.height = '64px';
             div.style.width = '64px';
-            div.style.margin = '-76px 0 0 -76px';
             div.style.border = '8px solid #e1e1e1';
             div.style.borderRadius = '50%';
             div.style.borderTop = '8px solid #111';
             div.animate([
-                { transform: 'rotate(0deg)' },
-                { transform: 'rotate(360deg)' }
+                { transform: 'translate(-50%, -50%) rotate(0deg)' },
+                { transform: 'translate(-50%, -50%) rotate(360deg)' }
               ], {
                 duration: 2000,
                 iterations: Infinity
