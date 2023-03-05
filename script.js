@@ -1,5 +1,4 @@
 // parallax effect
-
 const parallax = document.getElementById("parallax");
 
 if(screen.width >= 1040) {
@@ -9,7 +8,7 @@ if(screen.width >= 1040) {
   });
 };
 
-// show image and prevent scroll
+// show clicked image and prevent scroll
 const images = document.querySelectorAll(".gallery-image");
 const imageShow = document.getElementById("imageShow");
 
@@ -37,7 +36,6 @@ function toggleMenu() {
 };
 
 // fading animation on screen enter
-
 const targets = document.querySelectorAll('[data-animation=fade]');
 // Select all image container
 const galleryContainers = document.querySelectorAll('.img-container');
